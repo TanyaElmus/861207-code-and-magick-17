@@ -46,7 +46,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText(Math.floor(times[i]), colomnSpace, barHeight - GAP);
     ctx.fillStyle = (names[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : 'rgba(0, 0, 255, 1)';
 
-    ctx.globalAlpha = names[i] !== 'Вы' ? ctx.globalAlpha = Math.random() : 1;
+    ctx.globalAlpha = names[i] !== 'Вы' ? Math.random() : 1;
 
     ctx.fillRect(colomnSpace, barHeight, BAR_WIDTH, HIST_HEIGHT * times[i] / maxTime);
   }
